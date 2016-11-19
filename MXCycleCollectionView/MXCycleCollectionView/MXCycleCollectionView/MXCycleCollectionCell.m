@@ -1,7 +1,11 @@
- 
+//
+// @author 刘智援 2016-11-19
+// @简书地址:    http://www.jianshu.com/users/0714484ea84f/latest_articles
+// @Github地址: https://github.com/lyoniOS
+//
 
 #import "MXCycleCollectionCell.h"
-
+#import "SDWebImage/UIImageView+WebCache.h"
 @interface MXCycleCollectionCell ()
 @property (nonatomic,strong) UIImageView *iconView;
 
@@ -50,7 +54,7 @@
     
     if ([item.pic hasPrefix:@"http://"] || [item.pic hasPrefix:@"https://"]) {
         
-//        [self.iconView sd_setImageWithURL:[NSURL URLWithString:item.pic] placeholderImage:nil];
+        [self.iconView sd_setImageWithURL:[NSURL URLWithString:item.pic] placeholderImage:nil];
         
     }else {
         

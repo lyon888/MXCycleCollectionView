@@ -1,8 +1,7 @@
 //
-//
-// 刘智援 2016-11-12
-// 简书地址:    http://www.jianshu.com/users/0714484ea84f/latest_articles
-// Github地址: https://github.com/lyoniOS
+// @author 刘智援 2016-11-19
+// @简书地址:    http://www.jianshu.com/users/0714484ea84f/latest_articles
+// @Github地址: https://github.com/lyoniOS
 //
 
 #import <UIKit/UIKit.h>
@@ -25,9 +24,10 @@
 
 @interface MXCycleCollectionView : UIView
 
-@property (nonatomic,assign) id<MXCycleCollectionViewDelegate>mxDelegate;
 /**轮播图模型数组*/
 @property (nonatomic,strong) NSArray <MXCycleItem *>*cycleItems;
+@property (nonatomic,assign) id<MXCycleCollectionViewDelegate>mxDelegate;
+
 
 /**
  初始化实例方法

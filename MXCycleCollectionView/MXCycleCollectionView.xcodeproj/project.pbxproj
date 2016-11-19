@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16B0EFBBB70802B7DDC7AAED /* libPods-MXCycleCollectionView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CC7615260E7CD84AF05269 /* libPods-MXCycleCollectionView.a */; };
 		19852A8F1DDDAC3D005064FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19852A8E1DDDAC3D005064FA /* main.m */; };
 		19852A921DDDAC3D005064FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19852A911DDDAC3D005064FA /* AppDelegate.m */; };
 		19852A951DDDAC3D005064FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19852A941DDDAC3D005064FA /* ViewController.m */; };
@@ -63,6 +64,9 @@
 		19852AC81DDDAED8005064FA /* MXCycleCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXCycleCollectionCell.m; sourceTree = "<group>"; };
 		19852AC91DDDAED8005064FA /* MXCycleCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXCycleCollectionView.h; sourceTree = "<group>"; };
 		19852ACA1DDDAED8005064FA /* MXCycleCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXCycleCollectionView.m; sourceTree = "<group>"; };
+		23CC7615260E7CD84AF05269 /* libPods-MXCycleCollectionView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MXCycleCollectionView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E7266DF9DC328B37FF1D151 /* Pods-MXCycleCollectionView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MXCycleCollectionView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MXCycleCollectionView/Pods-MXCycleCollectionView.debug.xcconfig"; sourceTree = "<group>"; };
+		5E93C96D4739195716B6AECE /* Pods-MXCycleCollectionView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MXCycleCollectionView.release.xcconfig"; path = "Pods/Target Support Files/Pods-MXCycleCollectionView/Pods-MXCycleCollectionView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16B0EFBBB70802B7DDC7AAED /* libPods-MXCycleCollectionView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +102,8 @@
 				19852AA61DDDAC3D005064FA /* MXCycleCollectionViewTests */,
 				19852AB11DDDAC3D005064FA /* MXCycleCollectionViewUITests */,
 				19852A8B1DDDAC3D005064FA /* Products */,
+				25E2FD610046ECFC48491478 /* Pods */,
+				E669E8B375F9EBD783F6DCC5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,12 +163,12 @@
 		19852AC01DDDAED8005064FA /* MXCycleCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				19852AC11DDDAED8005064FA /* Category */,
-				19852AC41DDDAED8005064FA /* Model */,
 				19852AC71DDDAED8005064FA /* MXCycleCollectionCell.h */,
 				19852AC81DDDAED8005064FA /* MXCycleCollectionCell.m */,
 				19852AC91DDDAED8005064FA /* MXCycleCollectionView.h */,
 				19852ACA1DDDAED8005064FA /* MXCycleCollectionView.m */,
+				19852AC11DDDAED8005064FA /* Category */,
+				19852AC41DDDAED8005064FA /* Model */,
 			);
 			path = MXCycleCollectionView;
 			sourceTree = "<group>";
@@ -184,6 +191,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		25E2FD610046ECFC48491478 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E7266DF9DC328B37FF1D151 /* Pods-MXCycleCollectionView.debug.xcconfig */,
+				5E93C96D4739195716B6AECE /* Pods-MXCycleCollectionView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E669E8B375F9EBD783F6DCC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23CC7615260E7CD84AF05269 /* libPods-MXCycleCollectionView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19852AB71DDDAC3D005064FA /* Build configuration list for PBXNativeTarget "MXCycleCollectionView" */;
 			buildPhases = (
+				F6498F0BAFDF72E6D5B17D1C /* [CP] Check Pods Manifest.lock */,
 				19852A861DDDAC3D005064FA /* Sources */,
 				19852A871DDDAC3D005064FA /* Frameworks */,
 				19852A881DDDAC3D005064FA /* Resources */,
+				A7AC6E9D05D36230AC23A67F /* [CP] Embed Pods Frameworks */,
+				1BE89496A8096E797020454F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -311,6 +338,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BE89496A8096E797020454F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MXCycleCollectionView/Pods-MXCycleCollectionView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7AC6E9D05D36230AC23A67F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MXCycleCollectionView/Pods-MXCycleCollectionView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6498F0BAFDF72E6D5B17D1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		19852A861DDDAC3D005064FA /* Sources */ = {
@@ -470,6 +545,7 @@
 		};
 		19852AB81DDDAC3D005064FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E7266DF9DC328B37FF1D151 /* Pods-MXCycleCollectionView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MXCycleCollectionView/Info.plist;
@@ -481,6 +557,7 @@
 		};
 		19852AB91DDDAC3D005064FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E93C96D4739195716B6AECE /* Pods-MXCycleCollectionView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MXCycleCollectionView/Info.plist;

@@ -1,8 +1,7 @@
 //
-//
-// 刘智援 2016-11-12
-// 简书地址:http://www.jianshu.com/users/0714484ea84f/latest_articles
-// Github地址:https://github.com/lyoniOS
+// @author 刘智援 2016-11-19
+// @简书地址:    http://www.jianshu.com/users/0714484ea84f/latest_articles
+// @Github地址: https://github.com/lyoniOS
 //
 
 #import "MXCycleCollectionView.h"
@@ -14,6 +13,7 @@ static NSInteger const kMaxSection = 20;
 static NSString *const kCycleCollectionView = @"kCycleCollectionView";
 
 @interface MXCycleCollectionView ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@property (nonatomic,weak  ) UICollectionViewFlowLayout *flowLayout;
 @property (nonatomic,strong) UICollectionView *collectionView;
 @property (nonatomic,strong) UIPageControl *pageContol;
 @property (nonatomic,weak  ) NSTimer *timer;
@@ -43,11 +43,11 @@ static NSString *const kCycleCollectionView = @"kCycleCollectionView";
 - (void)setupUI
 {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.itemSize = CGSizeMake(self.frame.size.width, self.frame.size.height);
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     flowLayout.minimumLineSpacing = 0;
+    _flowLayout = flowLayout;
     
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height) collectionViewLayout:flowLayout];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     self.collectionView.pagingEnabled   = YES;
     self.collectionView.delegate        = self;
@@ -66,6 +66,7 @@ static NSString *const kCycleCollectionView = @"kCycleCollectionView";
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:kTimeInterval target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     self.timer = timer;
+    
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -152,6 +153,8 @@ static NSString *const kCycleCollectionView = @"kCycleCollectionView";
 - (void)layoutSubviews
 {
     [super layoutSubviews];
+    self.flowLayout.itemSize = CGSizeMake(self.frame.size.width, self.frame.size.height);
+    self.collectionView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     self.pageContol.frame = CGRectMake((self.frame.size.width-100)/2, self.frame.size.height-20, 100, 20);
 }
 
@@ -187,5 +190,6 @@ static NSString *const kCycleCollectionView = @"kCycleCollectionView";
     //默认显示最中间的那组
     [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:kMaxSection/2] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
 }
+
 
 @end

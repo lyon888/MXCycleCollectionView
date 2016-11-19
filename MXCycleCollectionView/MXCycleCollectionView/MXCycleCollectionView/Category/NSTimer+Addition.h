@@ -1,9 +1,7 @@
 //
-//  NSTimer+Addition.h
-//  PagedScrollView
-//
-//  Created by 陈政 on 14-1-24.
-//  Copyright (c) 2014年 Apple Inc. All rights reserved.
+// @author 刘智援 2016-11-19
+// @简书地址:    http://www.jianshu.com/users/0714484ea84f/latest_articles
+// @Github地址: https://github.com/lyoniOS
 //
 
 #import <Foundation/Foundation.h>
