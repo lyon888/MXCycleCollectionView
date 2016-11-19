@@ -63,7 +63,6 @@ static NSString *const kCycleCollectionView = @"kCycleCollectionView";
     self.pageContol.pageIndicatorTintColor = [UIColor whiteColor];
     [self addSubview:self.pageContol];
     
-    
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:kTimeInterval target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     self.timer = timer;
@@ -175,8 +174,11 @@ static NSString *const kCycleCollectionView = @"kCycleCollectionView";
 - (void)setCycleItems:(NSArray<MXCycleItem *> *)cycleItems
 {
     _cycleItems = cycleItems;
-    
-    if (cycleItems.count == 0) return;
+    //如果传入的数组为空 停止定时器
+    if (cycleItems.count == 0) {
+        [self pauseTimer];
+        return;
+    }
     
     [self.collectionView reloadData];
     

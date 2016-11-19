@@ -11,6 +11,14 @@
 
 #pragma mark - Life Cycle
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        [self setupUI];
+    }
+    return self;
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -40,7 +48,7 @@
 {
     _item = item;
     
-    if ([item.pic hasPrefix:@"http"]) {
+    if ([item.pic hasPrefix:@"http://"] || [item.pic hasPrefix:@"https://"]) {
         
 //        [self.iconView sd_setImageWithURL:[NSURL URLWithString:item.pic] placeholderImage:nil];
         

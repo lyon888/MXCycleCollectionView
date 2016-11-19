@@ -6,4 +6,5 @@
 @interface MXCycleCollectionCell : UICollectionViewCell
 /**轮播图模型*/
 @property (nonatomic, strong)MXCycleItem *item;
+
 @end
